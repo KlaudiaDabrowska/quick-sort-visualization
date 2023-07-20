@@ -10,7 +10,7 @@ export const useRecordingSortAlgorithm = () => {
   const generateNumbers = useCallback(
     () =>
       Array.from({ length: arrayLength }, () =>
-        Math.floor(Math.random() * initialArrayLength + 1)
+        Math.floor(Math.random() * arrayLength + 1)
       ),
     [arrayLength]
   );

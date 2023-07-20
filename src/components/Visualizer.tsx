@@ -86,7 +86,7 @@ export const Visualizer = () => {
   };
 
   return (
-    <>
+    <div data-testid="visualizer">
       <Navbar
         regenerateNumbers={resetNumbers}
         startStopVisualization={startStopVisualization}
@@ -118,10 +118,11 @@ export const Visualizer = () => {
                   $height={number}
                   $backgroundColor={theme.colors.indexColor}
                   key={`${number}-${idx}`}
+                  data-testid="unsortedNumberBar"
                 />
               );
             })}
       </VisualizerWrapper>
-    </>
+    </div>
   );
 };

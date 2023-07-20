@@ -33,13 +33,16 @@ export const Navbar = ({
   const isMobile = window.innerWidth < breakpoint;
 
   return (
-    <StyledNavbar>
+    <StyledNavbar data-testid="navbar">
       <Header>Quick Sort Visualizer</Header>
       <ButtonWrapper>
         <StyledButton onClick={previousStep} disabled={isPlaying}>
           {isMobile ? <SkipPrevious size={24} /> : "Prev"}
         </StyledButton>
-        <StyledButton onClick={startStopVisualization}>
+        <StyledButton
+          onClick={startStopVisualization}
+          data-testid="playPauseBtn"
+        >
           {isMobile && (isPlaying ? <Pause size={24} /> : <Play size={24} />)}
           {!isMobile && (isPlaying ? "Pause" : "Play")}
         </StyledButton>
@@ -66,6 +69,7 @@ export const Navbar = ({
             min={2}
             max={100}
             value={arrayLength}
+            data-testid="sizeOfArray"
             onChange={(e) => setArrayLength(+e.target.value)}
           />
           {arrayLength}
@@ -78,6 +82,7 @@ export const Navbar = ({
             min={10}
             max={3000}
             value={speed}
+            data-testid="speed"
             onChange={(e) => setSpeed(+e.target.value)}
           />
           {speed}
