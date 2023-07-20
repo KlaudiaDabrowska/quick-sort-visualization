@@ -29,3 +29,9 @@ $ npm run test
 Open [http://localhost:3000]
 
 ---
+
+#### Live
+
+Open [https://klaudiadabrowska.github.io/quick-sort-visualization/]
+
+---
