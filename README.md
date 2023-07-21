@@ -18,9 +18,7 @@ $ npm install
 $ npm start
 
 # Start unit tests
-
 $ npm run test
-
 
 ```
 
@@ -35,3 +33,7 @@ Open [http://localhost:3000]
 Open [https://klaudiadabrowska.github.io/quick-sort-visualization/]
 
 ---
+
+### Continuous Integration with GitHub Actions
+
+The application is integrated with GitHub Actions for automated testing. Each time a commit is pushed to the main branch or pull requests are created, the tests are automatically triggered. The GitHub Actions workflow configuration can be found in the repository's .github/workflows directory.

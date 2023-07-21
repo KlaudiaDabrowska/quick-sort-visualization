@@ -7,7 +7,10 @@ export class QuickSort implements RecordingSortAlgorithm {
     return this.sortingSteps;
   };
 
-  sort = (numbers: number[]) => this.quickSort(numbers);
+  sort = (numbers: number[]) => {
+    this.sortingSteps = [];
+    return this.quickSort(numbers);
+  };
 
   quickSort(arr: number[], left = 0, right = arr.length - 1) {
     if (arr.length > 1) {

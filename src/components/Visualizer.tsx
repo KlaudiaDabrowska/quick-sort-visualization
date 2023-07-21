@@ -110,6 +110,8 @@ export const Visualizer = () => {
                     : theme.colors.indexColor
                 }
                 key={`${number}-${idx}`}
+                data-testid="sortedNumberBar"
+                data-number={number}
               />
             ))
           : unsortedNumbers.map((number, idx) => {
